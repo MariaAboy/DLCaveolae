@@ -2,11 +2,15 @@
 A Deep Learning tool for the automated detection of caveolae in transmission electron microscopy images
 
 Instructions:
+
 0-Install Keras with the Tensorflow backend in RStudio following any of the tutorials available online, for example:
 https://tensorflow.rstudio.com/installation/
 https://cran.r-project.org/web/packages/keras/vignettes/index.html
+
 1-Download CNN models, TEMCellCNN.hdf5 and TEMCavCNN.h5, and place them in R directory folder.
+
 2-Download and open "DLCaveolae.R" script in RStudio.
+
 3-Edit the section #PARAMETERS if necessary. We recommend that you fully optimized the parameters for one example image before running the script in a large set of images.
   The customizable parameters are:
   -mode="PREDICT". Leave it untouched for the first time that an image is analized. Change for something different than "PREDICT" if you want to repeat postprocessing reusing previously generated predictions.
