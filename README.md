@@ -22,7 +22,7 @@ https://cran.r-project.org/web/packages/keras/vignettes/index.html
   
   -mode="PREDICT". Leave it untouched for the first time that an image is analized. Change for something different than "PREDICT" if you want to repeat postprocessing reusing previously generated predictions.
   
-  -path. The directory of the images. It should be something like "C:/Users/mcmaboy/Desktop/images" for windows or "/home/maria/Escritorio/images" for Ubuntu.
+  -path. The directory of the images. It should be something like "C:/Users/myname/Desktop/images" for windows or "/home/myname/Escritorio/images" for Ubuntu.
   
   -confidence. Minimum caveolar prediction probability required. Low values allow for a maximum number of caveolar predictions. Higher values provide only the most certain caveolae predictions.
   
