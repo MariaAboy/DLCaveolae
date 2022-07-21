@@ -55,28 +55,50 @@ https://cran.r-project.org/web/packages/keras/vignettes/index.html
   -measurePMLDdistances. Use T or TRUE if PM-LD distances are needed.
 
 4- Run the script. It may take several minutes per image.
+
 The script produces the following files:
+
 1)TEXT
+
 _CAVDF.txt  final list of corrected caveolae predictions, with coordinates and assigned to each cell in case there are several cells in the field
+
 _CAVDFDISTANCES.txt  final list of corrected caveolae predictions, with shorter PM and LD distance and closest LD and PM coordinates
+
 _CLUSTERPOINTS_CAVEOLAEPSEUDOSEGMENTATION.txt  clustered caveolae predictions after k-means cluster analysis, providing a caveolae pseudosegmentation. Columns include coordinates, class-consistent group and cluster to which each caveolae belongs, and the k-means implementation option that provided the highest score
+
 _CYTOPREDICTIONS.txt cytoplasmic coordinates with classified contacts
+
 _FINALPREDTHRIMAGE.txt  final cell pseudosegmentation, coordinates with corrected predictions
+
 _intPM.txt     interpolated PM coordinates and cell to which they belong, in case there are several cells per field
+
 _intLD.txt interpolated LD coordinates and cell to which they belong, in case there are several cells per field
+
 _PREDICTIONLIST.txt  initial coordinate predictions. This file is recovered by the script if the image is repeated and the mode is not set to "PREDICT"
+
 _PROBSCAVDF.txt  prediction probabilities for all caveolae predictions
 
+
 2)SVG IMAGES
+
 _CLUSTERPLOT.svg  class-consistent groups of caveolae with central coordinates derived from k-means cluster analysis
+
 _CLUSTERPOINTS_CAVEOLAEPSEUDOSEGMENTATION.svg  pseudosegmentation of caveolae with central coordinates derived from k-means cluster analysis 
+
 _FINALPLOT.svg  final caveolae central coordinates and predictions
+
 _FINALPLOTDIST.svg  final caveolae central coordinates and predictions + distance calculation to PM and LD
+
 _FINALPLOTINTERPOLATED.svg final caveolae central coordinates and predictions + interpolated surface delimitations
+
 _FINALPLOTlimitsandcav.svg final caveolae central coordinates and predictions + cytoplasmic surfaces
+
 _PREDICTIONSFINAL.svg corrected cell pseudosegmentation
+
 _PREDPLOT.svg   initial cell pseudosegmentation
+
 _PROBSANDCOORDS.svg prediction probability plot
+
 
 
 
