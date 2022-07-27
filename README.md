@@ -5,7 +5,7 @@ Instructions:
 
 
 0.1-Install Keras with the Tensorflow backend in RStudio following any of the tutorials available online, for example:
-https://tensorflow.rstudio.com/installation/
+https://tensorflow.rstudio.com/install/
 https://cran.r-project.org/web/packages/keras/vignettes/index.html
 
 0.2-Install the following R libraries: data.table, dplyr, abind, plyr. 
