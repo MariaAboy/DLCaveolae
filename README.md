@@ -100,6 +100,25 @@ _PREDPLOT.svg   initial cell pseudosegmentation
 _PROBSANDCOORDS.svg prediction probability plot
 
 
+5- If your images are tiles of a whole cell stitch and you have a file with the coordinates of each tile, you can run the script MergeSurfaces.R. This may correct potential PM and LD prediction errors
+
+Check the PARAMETERS section so the are the same that you choose for DLCaveolae.R. Make sure to add the directory of your images and the file with your stitch coordinates. The script generates these text files:
+
+CAVDFTOTAL.txt all caveolar coordinates in the stitched image
+
+FINALPM.txt   all predicted PM coordinates in the stitched image
+
+FINALLD.txt  all predicted LD coordinates in the stitched image
+
+PREDICTIONS.txt all coordinate predictions in the stitched image
+
+_LDCORRECTED.txt corrected LD coordinates in the stitched image
+
+_PMCORRECTED.txt corrected PM coordinates in the stitched image
+
+
+
+6- If you want to view the predictions in ImageJ, open the image and run the script PAINTPOINTS.ijm. Make sure to use the latest Fiji version. You can save the ROIs in the ROI manager window.
 
 
 
