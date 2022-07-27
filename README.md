@@ -60,7 +60,7 @@ https://cran.r-project.org/web/packages/keras/vignettes/index.html
 
 The script produces the following files:
 
-1)TEXT
+ 4.1 TEXT
 
 _CAVDF.txt  final list of corrected caveolae predictions, with coordinates and assigned to each cell in case there are several cells in the field
 
@@ -81,7 +81,7 @@ _PREDICTIONLIST.txt  initial coordinate predictions. This file is recovered by t
 _PROBSCAVDF.txt  prediction probabilities for all caveolae predictions
 
 
-2)SVG IMAGES
+ 4.2 SVG IMAGES
 
 _CLUSTERPLOT.svg  class-consistent groups of caveolae with central coordinates derived from k-means cluster analysis
 
