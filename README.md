@@ -1,13 +1,14 @@
 # DLCaveolae
 A Deep Learning tool for the automated detection of caveolae in transmission electron microscopy images
 
-
 Instructions:
 
 
-0-Install Keras with the Tensorflow backend in RStudio following any of the tutorials available online, for example:
+0.1-Install Keras with the Tensorflow backend in RStudio following any of the tutorials available online, for example:
 https://tensorflow.rstudio.com/installation/
 https://cran.r-project.org/web/packages/keras/vignettes/index.html
+
+0.2-Install the following R libraries: data.table, dplyr, abind, plyr. 
 
 
 1-Download CNN models, TEMCellCNN.hdf5 and TEMCavCNN.h5, and place them in R directory folder.
@@ -54,7 +55,8 @@ https://cran.r-project.org/web/packages/keras/vignettes/index.html
   
   -measurePMLDdistances. Use T or TRUE if PM-LD distances are needed.
 
-4- Run the script. It may take several minutes per image.
+
+4- Run the script. It may take several minutes per image. You can distribute your images in several folders and run the DLCaveolae.R script in parallel RStudio sessions.  
 
 The script produces the following files:
 
@@ -117,8 +119,4 @@ _LDCORRECTED.txt corrected LD coordinates in the stitched image
 _PMCORRECTED.txt corrected PM coordinates in the stitched image
 
 
-
 6- If you want to view the predictions in ImageJ, open the image and run the script PAINTPOINTS.ijm. Make sure to use the latest Fiji version. You can save the ROIs in the ROI manager window.
-
-
-
