@@ -60,7 +60,7 @@ https://cran.r-project.org/web/packages/keras/vignettes/index.html
 
 The script produces the following files:
 
- 4.1 TEXT
+ #### 4.1 TEXT
 
 _CAVDF.txt  final list of corrected caveolae predictions, with coordinates and assigned to each cell in case there are several cells in the field
 
@@ -81,7 +81,7 @@ _PREDICTIONLIST.txt  initial coordinate predictions. This file is recovered by t
 _PROBSCAVDF.txt  prediction probabilities for all caveolae predictions
 
 
- 4.2 SVG IMAGES
+ #### 4.2 SVG IMAGES
 
 _CLUSTERPLOT.svg  class-consistent groups of caveolae with central coordinates derived from k-means cluster analysis
 
@@ -125,10 +125,10 @@ _PMCORRECTED.txt corrected PM coordinates in the stitched image
 ## Known possible issues and troubleshooting:
 ### 1-If prediction results make no sense at all and there are none or few caveolae predictios (black dots in the _PREDPLOT.svg image), try increasing windowsize parameter.
 ### 2-If too many caveolae central coordinates found:
--If excessive caveolae central coordinates are located in true caveolar areas, try increasing maximum or average caveolae size.
--If excessive caveolae central coordinates are located in erroneous, non caveolar areas, try uncreasing the confidence parameter (defined between 0-1)
+#### -If excessive caveolae central coordinates are located in true caveolar areas, try increasing maximum or average caveolae size.
+#### -If excessive caveolae central coordinates are located in erroneous, non caveolar areas, try uncreasing the confidence parameter (defined between 0-1)
 ### 3-If too few caveolar central coordiantes found:
--If central coordinates are not found, but caveolar predictions are detected (black dots in the _PREDPLOT.svg image) try decreasing the confidence parameter.
--If central coordinates are not found, and no caveolar predictions are detected (black dots in the _PREDPLOT.svg image) try increasing the windowsize or decreasing the displacement.
+#### -If central coordinates are not found, but caveolar predictions are detected (black dots in the _PREDPLOT.svg image) try decreasing the confidence parameter.
+#### -If central coordinates are not found, and no caveolar predictions are detected (black dots in the _PREDPLOT.svg image) try increasing the windowsize or decreasing the displacement.
 
 ### Note: If you need to do some troubleshooting of the steps downstream image pseudosegmentation (changes in confidence parameter, change of min, average or max caveolae size to improve central coordinate finding) you can save time by setting the "mode" parameter to something different than "PREDICT".
