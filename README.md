@@ -1,23 +1,23 @@
 # DLCaveolae
 A Deep Learning tool for the automated detection of caveolae in transmission electron microscopy images
 
-Instructions:
+## Instructions:
 
 
-0.1-Install Keras with the Tensorflow backend in RStudio following any of the tutorials available online, for example:
+### 0.1-Install Keras with the Tensorflow backend in RStudio following any of the tutorials available online, for example:
 https://tensorflow.rstudio.com/install/
 https://cran.r-project.org/web/packages/keras/vignettes/index.html
 
-0.2-Install the following R libraries: data.table, dplyr, abind, plyr. 
+### 0.2-Install the following R libraries: data.table, dplyr, abind, plyr. 
 
 
-1-Download CNN models, TEMCellCNN.hdf5 and TEMCavCNN.h5, and place them in R directory folder.
+### 1-Download CNN models, TEMCellCNN.hdf5 and TEMCavCNN.h5, and place them in R directory folder.
 
 
-2-Download and open "DLCaveolae.R" script in RStudio.
+### 2-Download and open "DLCaveolae.R" script in RStudio.
 
 
-3-Edit the section #PARAMETERS if necessary. We recommend that you fully optimized the parameters for one example image before running the script in a large set of images.
+### 3-Edit the section #PARAMETERS if necessary. We recommend that you fully optimized the parameters for one example image before running the script in a large set of images.
  
  The customizable parameters are:
   
@@ -56,7 +56,7 @@ https://cran.r-project.org/web/packages/keras/vignettes/index.html
   -measurePMLDdistances. Use T or TRUE if PM-LD distances are needed.
 
 
-4- Run the script. It may take several minutes per image. You can distribute your images in several folders and run the DLCaveolae.R script in parallel RStudio sessions.  
+### 4- Run the script. It may take several minutes per image. You can distribute your images in several folders and run the DLCaveolae.R script in parallel RStudio sessions.  
 
 The script produces the following files:
 
@@ -102,7 +102,7 @@ _PREDPLOT.svg   initial cell pseudosegmentation
 _PROBSANDCOORDS.svg prediction probability plot
 
 
-5- If your images are tiles of a whole cell stitch and you have a file with the coordinates of each tile, you can run the script MergeSurfaces.R. This may correct potential PM and LD prediction errors
+### 5- If your images are tiles of a whole cell stitch and you have a file with the coordinates of each tile, you can run the script MergeSurfaces.R. This may correct potential PM and LD prediction errors
 
 Check the PARAMETERS section so the are the same that you choose for DLCaveolae.R. Make sure to add the directory of your images and the file with your stitch coordinates. The script generates these text files:
 
@@ -119,4 +119,16 @@ _LDCORRECTED.txt corrected LD coordinates in the stitched image
 _PMCORRECTED.txt corrected PM coordinates in the stitched image
 
 
-6- If you want to view the predictions in ImageJ, open the image and run the script PAINTPOINTS.ijm. Make sure to use the latest Fiji version. You can save the ROIs in the ROI manager window.
+### 6- If you want to view the predictions in ImageJ, open the image and run the script PAINTPOINTS.ijm. Make sure to use the latest Fiji version. You can save the ROIs in the ROI manager window.
+
+
+## Known possible issues and troubleshooting:
+### 1-If prediction results make no sense at all and there are none or few caveolae predictios (black dots in the _PREDPLOT.svg image), try increasing windowsize parameter.
+### 2-If too many caveolae central coordinates found:
+-If excessive caveolae central coordinates are located in true caveolar areas, try increasing maximum or average caveolae size.
+-If excessive caveolae central coordinates are located in erroneous, non caveolar areas, try uncreasing the confidence parameter (defined between 0-1)
+### 3-If too few caveolar central coordiantes found:
+-If central coordinates are not found, but caveolar predictions are detected (black dots in the _PREDPLOT.svg image) try decreasing the confidence parameter.
+-If central coordinates are not found, and no caveolar predictions are detected (black dots in the _PREDPLOT.svg image) try increasing the windowsize or decreasing the displacement.
+
+### Note: If you need to do some troubleshooting of the steps downstream image pseudosegmentation (changes in confidence parameter, change of min, average or max caveolae size to improve central coordinate finding) you can save time by setting the "mode" parameter to something different than "PREDICT".
