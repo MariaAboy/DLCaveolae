@@ -123,12 +123,12 @@ _PMCORRECTED.txt corrected PM coordinates in the stitched image
 
 
 ## Known possible issues and troubleshooting:
-### 1-If prediction results make no sense at all and there are none or few caveolae predictios (black dots in the _PREDPLOT.svg image), try increasing windowsize parameter.
-### 2-If too many caveolae central coordinates found:
-#### -If excessive caveolae central coordinates are located in true caveolar areas, try increasing maximum or average caveolae size.
-#### -If excessive caveolae central coordinates are located in erroneous, non caveolar areas, try uncreasing the confidence parameter (defined between 0-1)
-### 3-If too few caveolar central coordiantes found:
-#### -If central coordinates are not found, but caveolar predictions are detected (black dots in the _PREDPLOT.svg image) try decreasing the confidence parameter.
-#### -If central coordinates are not found, and no caveolar predictions are detected (black dots in the _PREDPLOT.svg image) try increasing the windowsize or decreasing the displacement.
+#### 1-If prediction results make no sense at all and there are none or few caveolae predictios (black dots in the _PREDPLOT.svg image), try increasing windowsize parameter.
+#### 2-If too many caveolae central coordinates found:
+##### -If excessive caveolae central coordinates are located in true caveolar areas, try increasing maximum or average caveolae size.
+##### -If excessive caveolae central coordinates are located in erroneous, non caveolar areas, try uncreasing the confidence parameter (defined between 0-1)
+#### 3-If too few caveolar central coordiantes found:
+##### -If central coordinates are not found, but caveolar predictions are detected (black dots in the _PREDPLOT.svg image) try decreasing the confidence parameter.
+##### -If central coordinates are not found, and no caveolar predictions are detected (black dots in the _PREDPLOT.svg image) try increasing the windowsize or decreasing the displacement.
 
-### Note: If you need to do some troubleshooting of the steps downstream image pseudosegmentation (changes in confidence parameter, change of min, average or max caveolae size to improve central coordinate finding) you can save time by setting the "mode" parameter to something different than "PREDICT".
+#### Note: If you need to do some troubleshooting of the steps downstream image pseudosegmentation (changes in confidence parameter, change of min, average or max caveolae size to improve central coordinate finding) you can save time by setting the "mode" parameter to something different than "PREDICT".
